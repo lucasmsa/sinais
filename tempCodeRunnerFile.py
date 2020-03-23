@@ -1,9 +1,8 @@
 from imports import *
 
-# redimensiona e achata uma imagem transformando-a 
-# em uma lista de intensidade de pixels
-def image_to_feature_vector(image, size=(10, 10)):
-        
+def image_to_feature_vector(image, size=(30, 30)):
+    # redimensiona e achata uma imagem transformando-a 
+    # em uma lista de intensidade de pixels    
     return cv2.resize(image, size).flatten()
 
 
@@ -41,9 +40,8 @@ for s_value in range(1, 41):
         
         img_array = np.asarray(img)
         
-        # aplicada a transformada de fourier bidimentsional
         fft_arr = abs(np.fft.rfft2(img_array))
-        
+
         new_img = Image.fromarray(fft_arr)
 
         if new_img.mode != 'RGB':
@@ -53,7 +51,6 @@ for s_value in range(1, 41):
 
         counter += 1
         
-print(fft_arr)
 
 image_paths = list(paths.list_images('fft_faces'))
 
@@ -71,8 +68,7 @@ for (i, image_path) in enumerate(image_paths):
     image = cv2.imread(image_path)
     # pegar a pessoa da imagem pelo nome do arquivo
     label = image_path.split(os.path.sep)[-1].split('_')[0]
-    label_numeric = label.split('s')[1]
-
+    
     # pegar valores de intensidade do pixel, depois o histograma
     # obtendo a distribuicao dos tons de preto na imagem
     pixels = image_to_feature_vector(image)
@@ -80,7 +76,7 @@ for (i, image_path) in enumerate(image_paths):
 
     pixelIntensities.append(pixels)
     histFeatures.append(histogram)
-    classLabels.append(label_numeric)
+    classLabels.append(label)
 
     
 # dividir os dados em treino e teste, 90% treino 10%
@@ -88,43 +84,15 @@ for (i, image_path) in enumerate(image_paths):
 (train_PI, test_PI, train_L, test_L) = train_test_split(
     pixelIntensities, classLabels, test_size=0.1, random_state=42
 )
-
 # utiliza-se aqui o histogrma dos tons de preto para treino 
 # e teste
 (train_HF, test_HF, train_HF_L, test_HF_L) = train_test_split(
     histFeatures, classLabels, test_size=0.1, random_state=42
 )
 
-
 # treinamento do KNN com 1 vizinho, utilizando o Pixel Intensities
 model = KNeighborsClassifier(n_neighbors=1)
-# treina o modelo atraves desse .fit
 model.fit(train_PI, train_L)
 accuracy = model.score(test_PI, test_L)
 model_accuracy = accuracy*100
-print(f'Model accuracy Pixel Intensities: {model_accuracy}')
-
-
-
-# Treinamento do modelo atraves do histograma da imagem
-model.fit(train_HF, train_HF_L)
-print(model)
-pred = model.predict(test_HF)
-print(np.asarray(test_HF_L, dtype=np.float64))
-print(pred.astype(np.float64))
-accuracy = model.score(test_HF, test_HF_L)
-model_accuracy = accuracy*100
 print(f'Model accuracy: {model_accuracy}')
-
-# TODO: Descobrir como fazer o MSE, tentei pela funcao mas do sklearn mas deu erro
-# TODO - talvez esse link ajude: https://machinelearningmastery.com/implement-machine-learning-algorithm-performance-metrics-scratch-python/
-# ?: Problema eh que nao sei exatamente o que deve ir para os parametros do mean squared error
-
-# TODO: Rodar os testes que ele pediu, acredito que essa parte nao seja tao dificil,
-# TODO - o que gera a transformada de fourier bidimensional eh essa parte do codigo 
-# TODO -- fft_arr = abs(np.fft.rfft2(img_array)), eh soh para cada imagem realizar os testes que ele pede, *acho*
-
-# TODO: A parte de achar a sub-regiao com menor frequencia tambem nao sei se esta sendo feita 
-# TODO - acredito que isso so vai requerer mudancas na funcao image_to_feature_vector, ela ja tem um parametro size
-# TODO -- mas acho que ele so redimensiona a imagem, e nao trata de achar essa sub-regiao, ver esse link: https://www.freecodecamp.org/news/getting-started-with-tesseract-part-ii-f7f9a0899b3f/
-# TODO --- talvez esse tambem ajude: https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html, ou esse: https://www.pyimagesearch.com/2016/04/11/finding-extreme-points-in-contours-with-opencv/
