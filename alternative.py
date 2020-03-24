@@ -120,6 +120,7 @@ for i in range(40):
 # TODO: Rodar os testes que ele pediu, acredito que essa parte nao seja tao dificil,
 # TODO - o que gera a transformada de fourier bidimensional eh essa parte do codigo 
 # TODO -- fft_arr = abs(np.fft.rfft2(img_array)), eh soh para cada imagem realizar os testes que ele pede, *acho*
+# TODO --- https://stackoverflow.com/questions/43001729/how-should-i-interpret-the-output-of-numpy-fft-rfft2
 
 # TODO: A parte de achar a sub-regiao com menor frequencia tambem nao sei se esta sendo feita 
 # TODO - acredito que isso so vai requerer mudancas na funcao image_to_feature_vector, ela ja tem um parametro size
