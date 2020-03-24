@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import glob
 from imutils import paths
 from sklearn.neighbors import KNeighborsClassifier
 # Cross validation foi trocada por model_selection devido a versao 

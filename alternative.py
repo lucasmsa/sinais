@@ -57,18 +57,20 @@ for s_value in range(1, 41):
 
 image_paths = list(paths.list_images('fft_faces'))
 
-# intensidade dos pixels
-pixelIntensities = []
-# histograma
-histFeatures = []
-# uma das 41 pessoas do dataset
-classLabels = []
-
 # para cada imagem no banco de dados preencher as 
 # listas supracitadas com os valores determinados
 
+# intensidade dos pixels
+pixelIntensitiesBid = [[] for i in range(40)]
+# histograma
+histFeaturesBid = [[] for i in range(40)]
+# uma das 41 pessoas do dataset
+classLabelsBid = [[] for i in range(40)]
 
-for (i, image_path) in enumerate(image_paths):
+count = 0
+person = 0
+
+for (i, image_path) in enumerate(sorted(image_paths)):
 
     image = cv2.imread(image_path)
     # pegar a pessoa da imagem pelo nome do arquivo
@@ -79,47 +81,41 @@ for (i, image_path) in enumerate(image_paths):
     pixels = image_to_feature_vector(image)
     histogram = extract_grayscale_histogram(image)
 
-    pixelIntensities.append(pixels)
-    histFeatures.append(histogram)
-    classLabels.append(label_numeric)
+    pixelIntensitiesBid[person].append(pixels)
+    histFeaturesBid[person].append(histogram)
+    classLabelsBid[person].append(int(label_numeric))
+
+    count += 1
+
+    if count % 10 == 0:
+        person += 1
+
+pixelIntensitiesNew = []
+pixelIntensitiesNew = np.array(pixelIntensitiesNew)
+
+# ANCHOR * 
+for i in range(40):
+    # dividir os dados em treino e teste, 90% treino 10%
+    # a priori, utilizando a intensidade dos pixels
+    (train_PI, test_PI, train_L, test_L) = train_test_split(
+    pixelIntensitiesBid[i], classLabelsBid[i], test_size=0.1, random_state=42)
+
+    print(f'\n{train_PI}')
+
+    model = KNeighborsClassifier(n_neighbors=1)
+    # treina o modelo atraves desse .fit
+    model.fit(train_PI, train_L)
+    accuracy = model.score(test_PI, test_L)
+    model_accuracy = accuracy*100
+    print(f'{i} - Model accuracy Pixel Intensities: {model_accuracy}')
 
 
-# dividir os dados em treino e teste, 90% treino 10%
-# a priori, utilizando a intensidade dos pixels
-(train_PI, test_PI, train_L, test_L) = train_test_split(
-    pixelIntensities, classLabels, test_size=0.1, random_state=42
-)
-
-# utiliza-se aqui o histogrma dos tons de preto para treino 
-# e teste
-(train_HF, test_HF, train_HF_L, test_HF_L) = train_test_split(
-    histFeatures, classLabels, test_size=0.1, random_state=42
-)
-
-
-# treinamento do KNN com 1 vizinho, utilizando o Pixel Intensities
-model = KNeighborsClassifier(n_neighbors=1)
-# treina o modelo atraves desse .fit
-model.fit(train_PI, train_L)
-accuracy = model.score(test_PI, test_L)
-model_accuracy = accuracy*100
-print(f'Model accuracy Pixel Intensities: {model_accuracy}')
-
-
-
-# Treinamento do modelo atraves do histograma da imagem
-model.fit(train_HF, train_HF_L)
-print(model)
-pred = model.predict(test_HF)
-print(np.asarray(test_HF_L, dtype=np.float64))
-print(pred.astype(np.float64))
-accuracy = model.score(test_HF, test_HF_L)
-model_accuracy = accuracy*100
-print(f'Model accuracy: {model_accuracy}')
+# TODO: Achar uma maneira de juntar esses valores das imagens separadas para treino e teste no for marcado pela anchor tag
+# TODO  - para depois serem usados no treinamento do KNN no final
 
 # TODO: Descobrir como fazer o MSE, tentei pela funcao mas do sklearn mas deu erro
-# TODO - talvez esse link ajude: https://machinelearningmastery.com/implement-machine-learning-algorithm-performance-metrics-scratch-python/
-# ?: Problema eh que nao sei exatamente o que deve ir para os parametros do mean squared error
+# TODO  - talvez esse link ajude: https://machinelearningmastery.com/implement-machine-learning-algorithm-performance-metrics-scratch-python/
+# ? Problema eh que nao sei exatamente o que deve ir para os parametros do mean squared error
 
 # TODO: Rodar os testes que ele pediu, acredito que essa parte nao seja tao dificil,
 # TODO - o que gera a transformada de fourier bidimensional eh essa parte do codigo 
