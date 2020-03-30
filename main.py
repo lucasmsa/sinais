@@ -55,62 +55,96 @@ for s_value in range(1, 41):
         
 #print(fft_arr)
 
-image_paths = list(paths.list_images('fft_faces'))
+image_paths = sorted(list(paths.list_images('fft_faces')))
 
 # intensidade dos pixels
-pixelIntensities = []
+pixelIntensities_train = []
+pixelIntensities_test = []
 # histograma
-histFeatures = []
+histFeatures_train = []
+histFeatures_test = []
 # uma das 41 pessoas do dataset
-classLabels = []
+classLabels_train = []
+classLabels_test = []
 
 # para cada imagem no banco de dados preencher as 
 # listas supracitadas com os valores determinados
 
+counter = 0
+random_image_num = random.randint(1, 10)
+print(image_paths)
 
 for (i, image_path) in enumerate(image_paths):
 
+    if counter%10 == 0:
+        random_image_num = random.randint(1, 10)
+        
     image = cv2.imread(image_path)
     # pegar a pessoa da imagem pelo nome do arquivo
     label = image_path.split(os.path.sep)[-1].split('_')[0]
+    number_image = image_path.split(os.path.sep)[-1].split('_')[1]
+    number_image = number_image.split('.')[0]
+    
     label_numeric = label.split('s')[1]
+    
     # pegar valores de intensidade do pixel, depois o histograma
     # obtendo a distribuicao dos tons de preto na imagem
     pixels = image_to_feature_vector(image)
     histogram = extract_grayscale_histogram(image)
 
-    pixelIntensities.append(pixels)
-    histFeatures.append(histogram)
-    classLabels.append(label_numeric)
+    counter += 1
+    if random_image_num == int(number_image):
+        
+        pixelIntensities_test.append(pixels)
+        histFeatures_test.append(histogram)
+        classLabels_test.append(label_numeric)
+        
+    else: 
+        
+        pixelIntensities_train.append(pixels)
+        histFeatures_train.append(histogram)
+        classLabels_train.append(label_numeric)
 
 
+print("Length test: ", len(pixelIntensities_test))
+print("Length train: ", len(pixelIntensities_train))
 # dividir os dados em treino e teste, 90% treino 10%
 # a priori, utilizando a intensidade dos pixels
-(train_PI, test_PI, train_L, test_L) = train_test_split(
-    pixelIntensities, classLabels, test_size=0.1, random_state=42
-)
+
+# (train_PI, test_PI, train_L, test_L) = train_test_split(
+#     pixelIntensities, classLabels, test_size=0.1, random_state=42
+# )
 
 # utiliza-se aqui o histogrma dos tons de preto para treino 
 # e teste
-(train_HF, test_HF, train_HF_L, test_HF_L) = train_test_split(
-    histFeatures, classLabels, test_size=0.1, random_state=42
-)
 
+# (train_HF, test_HF, train_HF_L, test_HF_L) = train_test_split(
+#     histFeatures, classLabels, test_size=0.1, random_state=42
+# )
+print('---------------------')
 
 # treinamento do KNN com 1 vizinho, utilizando o Pixel Intensities
 model = KNeighborsClassifier(n_neighbors=1)
 # treina o modelo atraves desse .fit
-model.fit(train_PI, train_L)
-accuracy = model.score(test_PI, test_L)
+model.fit(histFeatures_train, classLabels_train)
+pred = model.predict(histFeatures_test)
+pred = list(pred)
+pred = [int(i) for i in pred]
+accuracy = model.score(histFeatures_test, classLabels_test)
+print("PREDICTIONS: ", pred)
+classLabels_test = [int(i) for i in classLabels_test]
+print("CLASS LABELS: ", classLabels_test)
 model_accuracy = accuracy*100
-print(f'Model accuracy Pixel Intensities: {model_accuracy}')
-
+mse = np.square(np.subtract(classLabels_test, pred)).mean()
+print(f'Model accuracy Histogram: {model_accuracy}%')
+print(f'Mean squared error: {mse}')
 
 
 # Treinamento do modelo atraves do histograma da imagem
 model.fit(train_HF, train_HF_L)
 print(model)
 pred = model.predict(test_HF)
+
 print(np.asarray(test_HF_L, dtype=np.float64))
 print(pred.astype(np.float64))
 accuracy = model.score(test_HF, test_HF_L)
