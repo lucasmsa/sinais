@@ -1,165 +1,170 @@
 from imports import *
 
-# redimensiona e achata uma imagem transformando-a 
-# em uma lista de intensidade de pixels
-def image_to_feature_vector(image, size=(10, 10)):
+f = open('results.txt', 'w')
+
+def fourier_prediction(complexPart):
+    
+    """[Função principal, vai fazer a previsão do KNN, 
+        pegando partes da transformada de fourier (real e/ou imaginaria]
+    
+    Arguments:
+        complexPart {[string]} -- [ Podem ser:
+                                    - real 
+                                    - imaginary
+                                    - sum
+                                    - real_and_imaginary
+                                    - merge]
+    """
+    scores = []
+    
+    for img_size in range(2, 51):
+    
+        train_imgs = []
+        test_imgs = []
+        y_pred = []
+
+        #? Aqui são inserido em uma lista as imagens re-dimensionadas de teste
+        for test in fft_centered_test:
+            test_imgs.append(np.array(smallest_subregion(img_size, test)).flatten()) 
         
-    return cv2.resize(image, size).flatten()
+        #? Aqui são inserido em uma lista as imagens re-dimensionadas de treino
+        for train in fft_centered_train:
+            train_imgs.append(np.array(smallest_subregion(img_size, train)).flatten())
+        
+        #? Aqui a lista de treino é transformada em array para poder ser parametro da função "fit"
+        x_train = np.array(train_imgs)
+        
+        #? Aqui é criado o modelo a ser utilizado para a identificação de padrões utilizando knn com um vizinho
+        #? para imagens com esta dimensão
+        model = KNeighborsClassifier(n_neighbors=1, metric="euclidean")
+
+        #? Aqui é realizado o treinamento do modelo considerando apenas a parte real
+        if complexPart == 'real':
+            model.fit(x_train.real, y_train)
+            
+            for test in test_imgs:
+                y_pred.append(model.predict([test.real]))
+        
+        elif complexPart == 'imaginary':
+            
+            model.fit(x_train.imag, y_train)
+            
+            for test in test_imgs:
+                y_pred.append(model.predict([test.imag]))
+                
+        elif complexPart == 'sum':
+            
+            model.fit(x_train.real + x_train.imag, y_train)
+            
+            for test in test_imgs:
+                y_pred.append(model.predict([test.real + test.imag]))
+
+        elif complexPart == 'real_and_imaginary':
+            #? Aqui sera feito a chamada passando apenas a parte Real e/ou Imaginária para análise
+            model_real = KNeighborsClassifier(n_neighbors=1, metric="euclidean")
+            model_imag = KNeighborsClassifier(n_neighbors=1, metric="euclidean")
+            model_real_imag = KNeighborsClassifier(n_neighbors=1, metric="euclidean")
+            model_imag_real = KNeighborsClassifier(n_neighbors=1, metric="euclidean")
+
+            model_real.fit(x_train.real + x_train.imag, y_train)
+            model_imag.fit(x_train.real + x_train.imag, y_train)
+            model_real_imag.fit(x_train.real + x_train.imag, y_train)
+            model_imag_real.fit(x_train.real + x_train.imag, y_train)
+            
+            for test in test_imgs:
+                y_pred_real=(model_real.predict([test.real]))
+                y_pred_imag=(model_imag.predict([test.imag]))
+                y_pred_real_imag=(model_real_imag.predict([test.imag]))
+                y_pred_imag_real=(model_imag_real.predict([test.real]))
+            
+                least_dist = [y_pred_real, y_pred_imag, y_pred_real_imag, y_pred_imag_real]
+                least_dist_sorted = sorted(least_dist)[0]
+                y_pred.append(least_dist_sorted)
+
+        elif complexPart == 'merge':
+            
+            x_train_abs = abs(x_train)
+            model.fit(x_train_abs, y_train)
+            
+            for test in test_imgs:
+                y_pred.append(model.predict([abs(test.real) + abs(test.imag)]))
+        
+        y_pred = np.array(y_pred) 
+        score = accuracy_score(y_true, y_pred)
+        scores.append(score)
+        
+        f.write(f'Utilizando: {complexPart}\n')
+
+        f.write(f'Taxa de acerto com a foto {img_size}x{img_size}: {score*100}%\n')
+
+        f.write(f'Taxa de Erro {img_size}x{img_size}: {100 - score*100}%\n\n')
+
+    f.write(f'Score medio do tipo [{complexPart}]: {np.mean(score)*100}%\n')
+    f.write(f'\n----------------------------------------------------------\n\n')
 
 
-# construir o histograma da imagem para caracterizar a distribuicao de tons de preto desta
-def extract_grayscale_histogram(image):
-    # extrai os tons de cinza
-    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    # para uma imagem em preto e branco 8-bits de informacao por pixel, existem 256 diferentes possibilidades 
-    # de intensidade, assim, o histograma tem 256 valores
-    hist = cv2.calcHist([hsv], [0], None, [256], [0, 256])
+def smallest_subregion(diameter, image):
+    #? Pegando os valores centrais da imagem após recentralizá-los
+    r = diameter//2
+    #? Altura considerando somente a parte inteira
+    x = width//2 
+    #? Largura considerando apenas a parte inteira
+    y = height//2 
+    
+    odd = 0 
+    if diameter % 2 != 0:
+        odd = -1 
+    
+    return image[x - r + odd: x + r, y - r + odd: y + r]
 
-    # normalizacao do histograma
-    if imutils.is_cv2():
-        hist = cv2.normalize(hist)
+fft_train, fft_centered_train = [], []
+fft_test, fft_centered_test = [], []
+label_train, label_test = [], []
+people_test, people_train = [], []
+y_train, y_true = [], []
 
-    else:
-        cv2.normalize(hist, hist)
-
-    return hist.flatten()
-
-
-try:
-    os.makedirs('fft_faces')
-except Exception:
-    pass
-
-counter = 0
-# passa por todas as imagens do banco de dados cedido e
-# cria novas imagens utilizando transformada de fourier bidimensional
+#? Passa por todas as imagens do banco de dados cedido e
+#? Cria novas imagens utilizando transformada de fourier bidimensional
 for s_value in range(1, 41):
+    
+    y_true.append(s_value)
+    random_image_num = random.randint(1, 10)
 
     for img_value in range(1, 11):
-
+        
         img = Image.open(f'orl_faces/s{s_value}/{img_value}.pgm')
-        
+
         img_array = np.asarray(img)
+
+        #? aplicada a transformada de fourier bidimentsional
+        fft_arr = np.fft.fft2(img_array)
         
-        # aplicada a transformada de fourier bidimentsional
-        fft_arr = abs(np.fft.rfft2(img_array))
-        
-        new_img = Image.fromarray(fft_arr)
+        #? coloca no treino se for a imagem aleatória que pegou
+        if img_value == random_image_num:
+            fft_test.append(fft_arr)
+            fft_centered_test.append(np.fft.fftshift(fft_arr))
+            label_test.append(s_value)
+            people_test.append(img)
 
-        if new_img.mode != 'RGB':
-            new_img = new_img.convert('RGB')
-
-        new_img.save(f'fft_faces/s{s_value}_{img_value}.png')
-
-        counter += 1
-        
-#print(fft_arr)
-
-image_paths = sorted(list(paths.list_images('fft_faces')))
-
-# intensidade dos pixels
-pixelIntensities_train = []
-pixelIntensities_test = []
-# histograma
-histFeatures_train = []
-histFeatures_test = []
-# uma das 41 pessoas do dataset
-classLabels_train = []
-classLabels_test = []
-
-# para cada imagem no banco de dados preencher as 
-# listas supracitadas com os valores determinados
-
-counter = 0
-random_image_num = random.randint(1, 10)
-print(image_paths)
-
-for (i, image_path) in enumerate(image_paths):
-
-    if counter%10 == 0:
-        random_image_num = random.randint(1, 10)
-        
-    image = cv2.imread(image_path)
-    # pegar a pessoa da imagem pelo nome do arquivo
-    label = image_path.split(os.path.sep)[-1].split('_')[0]
-    number_image = image_path.split(os.path.sep)[-1].split('_')[1]
-    number_image = number_image.split('.')[0]
-    
-    label_numeric = label.split('s')[1]
-    
-    # pegar valores de intensidade do pixel, depois o histograma
-    # obtendo a distribuicao dos tons de preto na imagem
-    pixels = image_to_feature_vector(image)
-    histogram = extract_grayscale_histogram(image)
-
-    counter += 1
-    if random_image_num == int(number_image):
-        
-        pixelIntensities_test.append(pixels)
-        histFeatures_test.append(histogram)
-        classLabels_test.append(label_numeric)
-        
-    else: 
-        
-        pixelIntensities_train.append(pixels)
-        histFeatures_train.append(histogram)
-        classLabels_train.append(label_numeric)
+        #? se não for, coloca em teste
+        else:
+            
+            fft_train.append(fft_arr)
+            fft_centered_train.append(np.fft.fftshift(fft_arr))
+            label_train.append(s_value)
+            people_train.append(img)
+            y_train.append(s_value)
+            
+            
+width, height = np.array(people_test[0].size)
 
 
-print("Length test: ", len(pixelIntensities_test))
-print("Length train: ", len(pixelIntensities_train))
-# dividir os dados em treino e teste, 90% treino 10%
-# a priori, utilizando a intensidade dos pixels
+fourier_prediction('merge')
+fourier_prediction('real')
+fourier_prediction('imaginary')
+fourier_prediction('sum')
+fourier_prediction('real_and_imaginary')
 
-# (train_PI, test_PI, train_L, test_L) = train_test_split(
-#     pixelIntensities, classLabels, test_size=0.1, random_state=42
-# )
-
-# utiliza-se aqui o histogrma dos tons de preto para treino 
-# e teste
-
-# (train_HF, test_HF, train_HF_L, test_HF_L) = train_test_split(
-#     histFeatures, classLabels, test_size=0.1, random_state=42
-# )
-print('---------------------')
-
-# treinamento do KNN com 1 vizinho, utilizando o Pixel Intensities
-model = KNeighborsClassifier(n_neighbors=1)
-# treina o modelo atraves desse .fit
-model.fit(histFeatures_train, classLabels_train)
-pred = model.predict(histFeatures_test)
-pred = list(pred)
-pred = [int(i) for i in pred]
-accuracy = model.score(histFeatures_test, classLabels_test)
-print("PREDICTIONS: ", pred)
-classLabels_test = [int(i) for i in classLabels_test]
-print("CLASS LABELS: ", classLabels_test)
-model_accuracy = accuracy*100
-mse = np.square(np.subtract(classLabels_test, pred)).mean()
-print(f'Model accuracy Histogram: {model_accuracy}%')
-print(f'Mean squared error: {mse}')
+f.close()
 
 
-# Treinamento do modelo atraves do histograma da imagem
-model.fit(train_HF, train_HF_L)
-print(model)
-pred = model.predict(test_HF)
-
-print(np.asarray(test_HF_L, dtype=np.float64))
-print(pred.astype(np.float64))
-accuracy = model.score(test_HF, test_HF_L)
-model_accuracy = accuracy*100
-print(f'Model accuracy: {model_accuracy}')
-
-# TODO: Descobrir como fazer o MSE, tentei pela funcao mas do sklearn mas deu erro
-# TODO - talvez esse link ajude: https://machinelearningmastery.com/implement-machine-learning-algorithm-performance-metrics-scratch-python/
-# ?: Problema eh que nao sei exatamente o que deve ir para os parametros do mean squared error
-
-# TODO: Rodar os testes que ele pediu, acredito que essa parte nao seja tao dificil,
-# TODO - o que gera a transformada de fourier bidimensional eh essa parte do codigo 
-# TODO -- fft_arr = abs(np.fft.rfft2(img_array)), eh soh para cada imagem realizar os testes que ele pede, *acho*
-
-# TODO: A parte de achar a sub-regiao com menor frequencia tambem nao sei se esta sendo feita 
-# TODO - acredito que isso so vai requerer mudancas na funcao image_to_feature_vector, ela ja tem um parametro size
-# TODO -- mas acho que ele so redimensiona a imagem, e nao trata de achar essa sub-regiao, ver esse link: https://www.freecodecamp.org/news/getting-started-with-tesseract-part-ii-f7f9a0899b3f/
-# TODO --- talvez esse tambem ajude: https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html, ou esse: https://www.pyimagesearch.com/2016/04/11/finding-extreme-points-in-contours-with-opencv/

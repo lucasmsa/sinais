@@ -1,0 +1,1000 @@
+Utilizando: merge
+Taxa de acerto com a foto 2x2: 2.5%
+Taxa de Erro 2x2: 97.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 3x3: 7.5%
+Taxa de Erro 3x3: 92.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 4x4: 30.0%
+Taxa de Erro 4x4: 70.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 5x5: 30.0%
+Taxa de Erro 5x5: 70.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 6x6: 40.0%
+Taxa de Erro 6x6: 60.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 7x7: 45.0%
+Taxa de Erro 7x7: 55.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 8x8: 47.5%
+Taxa de Erro 8x8: 52.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 9x9: 55.00000000000001%
+Taxa de Erro 9x9: 44.99999999999999%
+
+Utilizando: merge
+Taxa de acerto com a foto 10x10: 62.5%
+Taxa de Erro 10x10: 37.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 11x11: 72.5%
+Taxa de Erro 11x11: 27.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 12x12: 67.5%
+Taxa de Erro 12x12: 32.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 13x13: 75.0%
+Taxa de Erro 13x13: 25.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 14x14: 80.0%
+Taxa de Erro 14x14: 20.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 15x15: 85.0%
+Taxa de Erro 15x15: 15.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 16x16: 87.5%
+Taxa de Erro 16x16: 12.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 17x17: 95.0%
+Taxa de Erro 17x17: 5.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 18x18: 95.0%
+Taxa de Erro 18x18: 5.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 19x19: 100.0%
+Taxa de Erro 19x19: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 20x20: 95.0%
+Taxa de Erro 20x20: 5.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 21x21: 97.5%
+Taxa de Erro 21x21: 2.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 22x22: 97.5%
+Taxa de Erro 22x22: 2.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 23x23: 97.5%
+Taxa de Erro 23x23: 2.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 24x24: 92.5%
+Taxa de Erro 24x24: 7.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 25x25: 95.0%
+Taxa de Erro 25x25: 5.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 26x26: 95.0%
+Taxa de Erro 26x26: 5.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 27x27: 97.5%
+Taxa de Erro 27x27: 2.5%
+
+Utilizando: merge
+Taxa de acerto com a foto 28x28: 100.0%
+Taxa de Erro 28x28: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 29x29: 100.0%
+Taxa de Erro 29x29: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 30x30: 100.0%
+Taxa de Erro 30x30: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 31x31: 100.0%
+Taxa de Erro 31x31: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 32x32: 100.0%
+Taxa de Erro 32x32: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 33x33: 100.0%
+Taxa de Erro 33x33: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 34x34: 100.0%
+Taxa de Erro 34x34: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 35x35: 100.0%
+Taxa de Erro 35x35: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 36x36: 100.0%
+Taxa de Erro 36x36: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 37x37: 100.0%
+Taxa de Erro 37x37: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 38x38: 100.0%
+Taxa de Erro 38x38: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 39x39: 100.0%
+Taxa de Erro 39x39: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 40x40: 100.0%
+Taxa de Erro 40x40: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 41x41: 100.0%
+Taxa de Erro 41x41: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 42x42: 100.0%
+Taxa de Erro 42x42: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 43x43: 100.0%
+Taxa de Erro 43x43: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 44x44: 100.0%
+Taxa de Erro 44x44: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 45x45: 100.0%
+Taxa de Erro 45x45: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 46x46: 100.0%
+Taxa de Erro 46x46: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 47x47: 100.0%
+Taxa de Erro 47x47: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 48x48: 100.0%
+Taxa de Erro 48x48: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 49x49: 100.0%
+Taxa de Erro 49x49: 0.0%
+
+Utilizando: merge
+Taxa de acerto com a foto 50x50: 100.0%
+Taxa de Erro 50x50: 0.0%
+
+Score medio do tipo [merge]: 100.0%
+
+----------------------------------------------------------
+
+Utilizando: real
+Taxa de acerto com a foto 2x2: 5.0%
+Taxa de Erro 2x2: 95.0%
+
+Utilizando: real
+Taxa de acerto com a foto 3x3: 10.0%
+Taxa de Erro 3x3: 90.0%
+
+Utilizando: real
+Taxa de acerto com a foto 4x4: 25.0%
+Taxa de Erro 4x4: 75.0%
+
+Utilizando: real
+Taxa de acerto com a foto 5x5: 27.500000000000004%
+Taxa de Erro 5x5: 72.5%
+
+Utilizando: real
+Taxa de acerto com a foto 6x6: 32.5%
+Taxa de Erro 6x6: 67.5%
+
+Utilizando: real
+Taxa de acerto com a foto 7x7: 47.5%
+Taxa de Erro 7x7: 52.5%
+
+Utilizando: real
+Taxa de acerto com a foto 8x8: 50.0%
+Taxa de Erro 8x8: 50.0%
+
+Utilizando: real
+Taxa de acerto com a foto 9x9: 52.5%
+Taxa de Erro 9x9: 47.5%
+
+Utilizando: real
+Taxa de acerto com a foto 10x10: 55.00000000000001%
+Taxa de Erro 10x10: 44.99999999999999%
+
+Utilizando: real
+Taxa de acerto com a foto 11x11: 60.0%
+Taxa de Erro 11x11: 40.0%
+
+Utilizando: real
+Taxa de acerto com a foto 12x12: 70.0%
+Taxa de Erro 12x12: 30.0%
+
+Utilizando: real
+Taxa de acerto com a foto 13x13: 72.5%
+Taxa de Erro 13x13: 27.5%
+
+Utilizando: real
+Taxa de acerto com a foto 14x14: 72.5%
+Taxa de Erro 14x14: 27.5%
+
+Utilizando: real
+Taxa de acerto com a foto 15x15: 82.5%
+Taxa de Erro 15x15: 17.5%
+
+Utilizando: real
+Taxa de acerto com a foto 16x16: 85.0%
+Taxa de Erro 16x16: 15.0%
+
+Utilizando: real
+Taxa de acerto com a foto 17x17: 92.5%
+Taxa de Erro 17x17: 7.5%
+
+Utilizando: real
+Taxa de acerto com a foto 18x18: 92.5%
+Taxa de Erro 18x18: 7.5%
+
+Utilizando: real
+Taxa de acerto com a foto 19x19: 100.0%
+Taxa de Erro 19x19: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 20x20: 100.0%
+Taxa de Erro 20x20: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 21x21: 100.0%
+Taxa de Erro 21x21: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 22x22: 100.0%
+Taxa de Erro 22x22: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 23x23: 100.0%
+Taxa de Erro 23x23: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 24x24: 100.0%
+Taxa de Erro 24x24: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 25x25: 100.0%
+Taxa de Erro 25x25: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 26x26: 100.0%
+Taxa de Erro 26x26: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 27x27: 100.0%
+Taxa de Erro 27x27: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 28x28: 100.0%
+Taxa de Erro 28x28: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 29x29: 100.0%
+Taxa de Erro 29x29: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 30x30: 100.0%
+Taxa de Erro 30x30: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 31x31: 100.0%
+Taxa de Erro 31x31: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 32x32: 100.0%
+Taxa de Erro 32x32: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 33x33: 100.0%
+Taxa de Erro 33x33: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 34x34: 100.0%
+Taxa de Erro 34x34: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 35x35: 100.0%
+Taxa de Erro 35x35: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 36x36: 100.0%
+Taxa de Erro 36x36: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 37x37: 100.0%
+Taxa de Erro 37x37: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 38x38: 100.0%
+Taxa de Erro 38x38: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 39x39: 100.0%
+Taxa de Erro 39x39: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 40x40: 100.0%
+Taxa de Erro 40x40: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 41x41: 100.0%
+Taxa de Erro 41x41: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 42x42: 100.0%
+Taxa de Erro 42x42: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 43x43: 100.0%
+Taxa de Erro 43x43: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 44x44: 100.0%
+Taxa de Erro 44x44: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 45x45: 100.0%
+Taxa de Erro 45x45: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 46x46: 100.0%
+Taxa de Erro 46x46: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 47x47: 100.0%
+Taxa de Erro 47x47: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 48x48: 100.0%
+Taxa de Erro 48x48: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 49x49: 100.0%
+Taxa de Erro 49x49: 0.0%
+
+Utilizando: real
+Taxa de acerto com a foto 50x50: 100.0%
+Taxa de Erro 50x50: 0.0%
+
+Score medio do tipo [real]: 100.0%
+
+----------------------------------------------------------
+
+Utilizando: imaginary
+Taxa de acerto com a foto 2x2: 2.5%
+Taxa de Erro 2x2: 97.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 3x3: 10.0%
+Taxa de Erro 3x3: 90.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 4x4: 22.5%
+Taxa de Erro 4x4: 77.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 5x5: 37.5%
+Taxa de Erro 5x5: 62.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 6x6: 40.0%
+Taxa de Erro 6x6: 60.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 7x7: 55.00000000000001%
+Taxa de Erro 7x7: 44.99999999999999%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 8x8: 57.49999999999999%
+Taxa de Erro 8x8: 42.50000000000001%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 9x9: 62.5%
+Taxa de Erro 9x9: 37.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 10x10: 60.0%
+Taxa de Erro 10x10: 40.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 11x11: 62.5%
+Taxa de Erro 11x11: 37.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 12x12: 65.0%
+Taxa de Erro 12x12: 35.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 13x13: 67.5%
+Taxa de Erro 13x13: 32.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 14x14: 70.0%
+Taxa de Erro 14x14: 30.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 15x15: 77.5%
+Taxa de Erro 15x15: 22.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 16x16: 85.0%
+Taxa de Erro 16x16: 15.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 17x17: 87.5%
+Taxa de Erro 17x17: 12.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 18x18: 85.0%
+Taxa de Erro 18x18: 15.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 19x19: 97.5%
+Taxa de Erro 19x19: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 20x20: 97.5%
+Taxa de Erro 20x20: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 21x21: 100.0%
+Taxa de Erro 21x21: 0.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 22x22: 100.0%
+Taxa de Erro 22x22: 0.0%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 23x23: 97.5%
+Taxa de Erro 23x23: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 24x24: 97.5%
+Taxa de Erro 24x24: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 25x25: 97.5%
+Taxa de Erro 25x25: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 26x26: 97.5%
+Taxa de Erro 26x26: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 27x27: 97.5%
+Taxa de Erro 27x27: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 28x28: 97.5%
+Taxa de Erro 28x28: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 29x29: 97.5%
+Taxa de Erro 29x29: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 30x30: 97.5%
+Taxa de Erro 30x30: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 31x31: 97.5%
+Taxa de Erro 31x31: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 32x32: 97.5%
+Taxa de Erro 32x32: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 33x33: 97.5%
+Taxa de Erro 33x33: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 34x34: 97.5%
+Taxa de Erro 34x34: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 35x35: 97.5%
+Taxa de Erro 35x35: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 36x36: 97.5%
+Taxa de Erro 36x36: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 37x37: 97.5%
+Taxa de Erro 37x37: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 38x38: 97.5%
+Taxa de Erro 38x38: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 39x39: 97.5%
+Taxa de Erro 39x39: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 40x40: 97.5%
+Taxa de Erro 40x40: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 41x41: 97.5%
+Taxa de Erro 41x41: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 42x42: 97.5%
+Taxa de Erro 42x42: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 43x43: 97.5%
+Taxa de Erro 43x43: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 44x44: 97.5%
+Taxa de Erro 44x44: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 45x45: 97.5%
+Taxa de Erro 45x45: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 46x46: 97.5%
+Taxa de Erro 46x46: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 47x47: 97.5%
+Taxa de Erro 47x47: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 48x48: 97.5%
+Taxa de Erro 48x48: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 49x49: 97.5%
+Taxa de Erro 49x49: 2.5%
+
+Utilizando: imaginary
+Taxa de acerto com a foto 50x50: 97.5%
+Taxa de Erro 50x50: 2.5%
+
+Score medio do tipo [imaginary]: 97.5%
+
+----------------------------------------------------------
+
+Utilizando: sum
+Taxa de acerto com a foto 2x2: 7.5%
+Taxa de Erro 2x2: 92.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 3x3: 12.5%
+Taxa de Erro 3x3: 87.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 4x4: 20.0%
+Taxa de Erro 4x4: 80.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 5x5: 30.0%
+Taxa de Erro 5x5: 70.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 6x6: 25.0%
+Taxa de Erro 6x6: 75.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 7x7: 40.0%
+Taxa de Erro 7x7: 60.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 8x8: 47.5%
+Taxa de Erro 8x8: 52.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 9x9: 50.0%
+Taxa de Erro 9x9: 50.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 10x10: 50.0%
+Taxa de Erro 10x10: 50.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 11x11: 60.0%
+Taxa de Erro 11x11: 40.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 12x12: 67.5%
+Taxa de Erro 12x12: 32.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 13x13: 70.0%
+Taxa de Erro 13x13: 30.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 14x14: 72.5%
+Taxa de Erro 14x14: 27.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 15x15: 80.0%
+Taxa de Erro 15x15: 20.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 16x16: 80.0%
+Taxa de Erro 16x16: 20.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 17x17: 90.0%
+Taxa de Erro 17x17: 10.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 18x18: 90.0%
+Taxa de Erro 18x18: 10.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 19x19: 97.5%
+Taxa de Erro 19x19: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 20x20: 95.0%
+Taxa de Erro 20x20: 5.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 21x21: 100.0%
+Taxa de Erro 21x21: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 22x22: 100.0%
+Taxa de Erro 22x22: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 23x23: 100.0%
+Taxa de Erro 23x23: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 24x24: 100.0%
+Taxa de Erro 24x24: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 25x25: 100.0%
+Taxa de Erro 25x25: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 26x26: 100.0%
+Taxa de Erro 26x26: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 27x27: 100.0%
+Taxa de Erro 27x27: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 28x28: 100.0%
+Taxa de Erro 28x28: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 29x29: 100.0%
+Taxa de Erro 29x29: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 30x30: 100.0%
+Taxa de Erro 30x30: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 31x31: 100.0%
+Taxa de Erro 31x31: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 32x32: 100.0%
+Taxa de Erro 32x32: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 33x33: 100.0%
+Taxa de Erro 33x33: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 34x34: 100.0%
+Taxa de Erro 34x34: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 35x35: 100.0%
+Taxa de Erro 35x35: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 36x36: 100.0%
+Taxa de Erro 36x36: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 37x37: 100.0%
+Taxa de Erro 37x37: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 38x38: 100.0%
+Taxa de Erro 38x38: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 39x39: 100.0%
+Taxa de Erro 39x39: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 40x40: 100.0%
+Taxa de Erro 40x40: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 41x41: 100.0%
+Taxa de Erro 41x41: 0.0%
+
+Utilizando: sum
+Taxa de acerto com a foto 42x42: 97.5%
+Taxa de Erro 42x42: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 43x43: 97.5%
+Taxa de Erro 43x43: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 44x44: 97.5%
+Taxa de Erro 44x44: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 45x45: 97.5%
+Taxa de Erro 45x45: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 46x46: 97.5%
+Taxa de Erro 46x46: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 47x47: 97.5%
+Taxa de Erro 47x47: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 48x48: 97.5%
+Taxa de Erro 48x48: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 49x49: 97.5%
+Taxa de Erro 49x49: 2.5%
+
+Utilizando: sum
+Taxa de acerto com a foto 50x50: 97.5%
+Taxa de Erro 50x50: 2.5%
+
+Score medio do tipo [sum]: 97.5%
+
+----------------------------------------------------------
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 2x2: 2.5%
+Taxa de Erro 2x2: 97.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 3x3: 10.0%
+Taxa de Erro 3x3: 90.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 4x4: 15.0%
+Taxa de Erro 4x4: 85.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 5x5: 25.0%
+Taxa de Erro 5x5: 75.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 6x6: 30.0%
+Taxa de Erro 6x6: 70.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 7x7: 22.5%
+Taxa de Erro 7x7: 77.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 8x8: 25.0%
+Taxa de Erro 8x8: 75.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 9x9: 20.0%
+Taxa de Erro 9x9: 80.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 10x10: 32.5%
+Taxa de Erro 10x10: 67.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 11x11: 27.500000000000004%
+Taxa de Erro 11x11: 72.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 12x12: 22.5%
+Taxa de Erro 12x12: 77.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 13x13: 42.5%
+Taxa de Erro 13x13: 57.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 14x14: 35.0%
+Taxa de Erro 14x14: 65.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 15x15: 37.5%
+Taxa de Erro 15x15: 62.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 16x16: 47.5%
+Taxa de Erro 16x16: 52.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 17x17: 57.49999999999999%
+Taxa de Erro 17x17: 42.50000000000001%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 18x18: 65.0%
+Taxa de Erro 18x18: 35.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 19x19: 47.5%
+Taxa de Erro 19x19: 52.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 20x20: 32.5%
+Taxa de Erro 20x20: 67.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 21x21: 27.500000000000004%
+Taxa de Erro 21x21: 72.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 22x22: 62.5%
+Taxa de Erro 22x22: 37.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 23x23: 65.0%
+Taxa de Erro 23x23: 35.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 24x24: 62.5%
+Taxa de Erro 24x24: 37.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 25x25: 67.5%
+Taxa de Erro 25x25: 32.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 26x26: 65.0%
+Taxa de Erro 26x26: 35.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 27x27: 65.0%
+Taxa de Erro 27x27: 35.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 28x28: 72.5%
+Taxa de Erro 28x28: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 29x29: 72.5%
+Taxa de Erro 29x29: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 30x30: 72.5%
+Taxa de Erro 30x30: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 31x31: 72.5%
+Taxa de Erro 31x31: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 32x32: 72.5%
+Taxa de Erro 32x32: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 33x33: 72.5%
+Taxa de Erro 33x33: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 34x34: 72.5%
+Taxa de Erro 34x34: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 35x35: 72.5%
+Taxa de Erro 35x35: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 36x36: 72.5%
+Taxa de Erro 36x36: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 37x37: 72.5%
+Taxa de Erro 37x37: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 38x38: 72.5%
+Taxa de Erro 38x38: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 39x39: 72.5%
+Taxa de Erro 39x39: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 40x40: 72.5%
+Taxa de Erro 40x40: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 41x41: 72.5%
+Taxa de Erro 41x41: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 42x42: 72.5%
+Taxa de Erro 42x42: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 43x43: 72.5%
+Taxa de Erro 43x43: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 44x44: 72.5%
+Taxa de Erro 44x44: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 45x45: 72.5%
+Taxa de Erro 45x45: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 46x46: 72.5%
+Taxa de Erro 46x46: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 47x47: 72.5%
+Taxa de Erro 47x47: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 48x48: 72.5%
+Taxa de Erro 48x48: 27.5%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 49x49: 70.0%
+Taxa de Erro 49x49: 30.0%
+
+Utilizando: real_and_imaginary
+Taxa de acerto com a foto 50x50: 70.0%
+Taxa de Erro 50x50: 30.0%
+
+Score medio do tipo [real_and_imaginary]: 70.0%
+
+----------------------------------------------------------
+
