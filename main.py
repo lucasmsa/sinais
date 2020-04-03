@@ -139,14 +139,14 @@ for s_value in range(1, 41):
         #? aplicada a transformada de fourier bidimentsional
         fft_arr = np.fft.fft2(img_array)
         
-        #? coloca no treino se for a imagem aleatória que pegou
+        #? coloca no teste se for a imagem aleatória que pegou
         if img_value == random_image_num:
             fft_test.append(fft_arr)
             fft_centered_test.append(np.fft.fftshift(fft_arr))
             label_test.append(s_value)
             people_test.append(img)
 
-        #? se não for, coloca em teste
+        #? se não for, coloca em treino
         else:
             
             fft_train.append(fft_arr)
